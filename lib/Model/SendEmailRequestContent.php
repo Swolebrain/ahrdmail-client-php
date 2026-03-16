@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace AHRDMail\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \AHRDMail\Client\ObjectSerializer;
 
 /**
  * SendEmailRequestContent Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class SendEmailRequestContent implements ModelInterface, ArrayAccess, \JsonSeria
         'from' => 'string',
         'to' => 'string[]',
         'subject' => 'string',
-        'body' => '\OpenAPI\Client\Model\EmailBody',
+        'body' => '\AHRDMail\Client\Model\EmailBody',
         'campaign_id' => 'string',
         'tags' => 'array<string,string>'
     ];
@@ -457,7 +457,7 @@ class SendEmailRequestContent implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets body
      *
-     * @return \OpenAPI\Client\Model\EmailBody
+     * @return \AHRDMail\Client\Model\EmailBody
      */
     public function getBody()
     {
@@ -467,7 +467,7 @@ class SendEmailRequestContent implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets body
      *
-     * @param \OpenAPI\Client\Model\EmailBody $body body
+     * @param \AHRDMail\Client\Model\EmailBody $body body
      *
      * @return self
      */

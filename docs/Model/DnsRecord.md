@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **record_zone** | **string** |  |
-**record_name** | [**\OpenAPI\Client\Model\AhrdMailDnsRecordName**](AhrdMailDnsRecordName.md) |  |
+**record_name** | [**\AHRDMail\Client\Model\AhrdMailDnsRecordName**](AhrdMailDnsRecordName.md) |  |
 **record_values** | **string[]** |  |
 **ttl** | **float** |  | [optional]
 **is_valid** | **bool** |  | [optional]

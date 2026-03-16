@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace AHRDMail\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \AHRDMail\Client\ObjectSerializer;
 
 /**
  * DnsRecord Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class DnsRecord implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'record_zone' => 'string',
-        'record_name' => '\OpenAPI\Client\Model\AhrdMailDnsRecordName',
+        'record_name' => '\AHRDMail\Client\Model\AhrdMailDnsRecordName',
         'record_values' => 'string[]',
         'ttl' => 'float',
         'is_valid' => 'bool'
@@ -356,7 +356,7 @@ class DnsRecord implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets record_name
      *
-     * @return \OpenAPI\Client\Model\AhrdMailDnsRecordName
+     * @return \AHRDMail\Client\Model\AhrdMailDnsRecordName
      */
     public function getRecordName()
     {
@@ -366,7 +366,7 @@ class DnsRecord implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets record_name
      *
-     * @param \OpenAPI\Client\Model\AhrdMailDnsRecordName $record_name record_name
+     * @param \AHRDMail\Client\Model\AhrdMailDnsRecordName $record_name record_name
      *
      * @return self
      */

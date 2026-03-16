@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace AHRDMail\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \AHRDMail\Client\ObjectSerializer;
 
 /**
  * CheckEmailIdentityDnsResponseContent Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class CheckEmailIdentityDnsResponseContent implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status' => '\OpenAPI\Client\Model\EmailIdentityStatus',
-        'dns_records' => '\OpenAPI\Client\Model\DnsRecord[]'
+        'status' => '\AHRDMail\Client\Model\EmailIdentityStatus',
+        'dns_records' => '\AHRDMail\Client\Model\DnsRecord[]'
     ];
 
     /**
@@ -299,7 +299,7 @@ class CheckEmailIdentityDnsResponseContent implements ModelInterface, ArrayAcces
     /**
      * Gets status
      *
-     * @return \OpenAPI\Client\Model\EmailIdentityStatus|null
+     * @return \AHRDMail\Client\Model\EmailIdentityStatus|null
      */
     public function getStatus()
     {
@@ -309,7 +309,7 @@ class CheckEmailIdentityDnsResponseContent implements ModelInterface, ArrayAcces
     /**
      * Sets status
      *
-     * @param \OpenAPI\Client\Model\EmailIdentityStatus|null $status status
+     * @param \AHRDMail\Client\Model\EmailIdentityStatus|null $status status
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class CheckEmailIdentityDnsResponseContent implements ModelInterface, ArrayAcces
     /**
      * Gets dns_records
      *
-     * @return \OpenAPI\Client\Model\DnsRecord[]|null
+     * @return \AHRDMail\Client\Model\DnsRecord[]|null
      */
     public function getDnsRecords()
     {
@@ -336,7 +336,7 @@ class CheckEmailIdentityDnsResponseContent implements ModelInterface, ArrayAcces
     /**
      * Sets dns_records
      *
-     * @param \OpenAPI\Client\Model\DnsRecord[]|null $dns_records dns_records
+     * @param \AHRDMail\Client\Model\DnsRecord[]|null $dns_records dns_records
      *
      * @return self
      */

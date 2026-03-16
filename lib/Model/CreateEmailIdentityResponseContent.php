@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace AHRDMail\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \AHRDMail\Client\ObjectSerializer;
 
 /**
  * CreateEmailIdentityResponseContent Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,10 +58,10 @@ class CreateEmailIdentityResponseContent implements ModelInterface, ArrayAccess,
       */
     protected static $openAPITypes = [
         'identity_arn' => 'string',
-        'dkim_records' => '\OpenAPI\Client\Model\DkimSettings',
-        'verification_records' => '\OpenAPI\Client\Model\VerificationTokens',
-        'status' => '\OpenAPI\Client\Model\EmailIdentityStatus',
-        'dns_records' => '\OpenAPI\Client\Model\DnsRecord[]'
+        'dkim_records' => '\AHRDMail\Client\Model\DkimSettings',
+        'verification_records' => '\AHRDMail\Client\Model\VerificationTokens',
+        'status' => '\AHRDMail\Client\Model\EmailIdentityStatus',
+        'dns_records' => '\AHRDMail\Client\Model\DnsRecord[]'
     ];
 
     /**
@@ -347,7 +347,7 @@ class CreateEmailIdentityResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Gets dkim_records
      *
-     * @return \OpenAPI\Client\Model\DkimSettings|null
+     * @return \AHRDMail\Client\Model\DkimSettings|null
      */
     public function getDkimRecords()
     {
@@ -357,7 +357,7 @@ class CreateEmailIdentityResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Sets dkim_records
      *
-     * @param \OpenAPI\Client\Model\DkimSettings|null $dkim_records dkim_records
+     * @param \AHRDMail\Client\Model\DkimSettings|null $dkim_records dkim_records
      *
      * @return self
      */
@@ -374,7 +374,7 @@ class CreateEmailIdentityResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Gets verification_records
      *
-     * @return \OpenAPI\Client\Model\VerificationTokens|null
+     * @return \AHRDMail\Client\Model\VerificationTokens|null
      */
     public function getVerificationRecords()
     {
@@ -384,7 +384,7 @@ class CreateEmailIdentityResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Sets verification_records
      *
-     * @param \OpenAPI\Client\Model\VerificationTokens|null $verification_records verification_records
+     * @param \AHRDMail\Client\Model\VerificationTokens|null $verification_records verification_records
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class CreateEmailIdentityResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Gets status
      *
-     * @return \OpenAPI\Client\Model\EmailIdentityStatus|null
+     * @return \AHRDMail\Client\Model\EmailIdentityStatus|null
      */
     public function getStatus()
     {
@@ -411,7 +411,7 @@ class CreateEmailIdentityResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Sets status
      *
-     * @param \OpenAPI\Client\Model\EmailIdentityStatus|null $status status
+     * @param \AHRDMail\Client\Model\EmailIdentityStatus|null $status status
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class CreateEmailIdentityResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Gets dns_records
      *
-     * @return \OpenAPI\Client\Model\DnsRecord[]|null
+     * @return \AHRDMail\Client\Model\DnsRecord[]|null
      */
     public function getDnsRecords()
     {
@@ -438,7 +438,7 @@ class CreateEmailIdentityResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Sets dns_records
      *
-     * @param \OpenAPI\Client\Model\DnsRecord[]|null $dns_records dns_records
+     * @param \AHRDMail\Client\Model\DnsRecord[]|null $dns_records dns_records
      *
      * @return self
      */

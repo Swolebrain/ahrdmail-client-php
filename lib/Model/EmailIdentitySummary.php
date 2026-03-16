@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace AHRDMail\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \AHRDMail\Client\ObjectSerializer;
 
 /**
  * EmailIdentitySummary Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class EmailIdentitySummary implements ModelInterface, ArrayAccess, \JsonSerializ
         'tenant_id' => 'string',
         'subtenant_id' => 'string',
         'domain' => 'string',
-        'status' => '\OpenAPI\Client\Model\EmailIdentityStatus'
+        'status' => '\AHRDMail\Client\Model\EmailIdentityStatus'
     ];
 
     /**
@@ -394,7 +394,7 @@ class EmailIdentitySummary implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets status
      *
-     * @return \OpenAPI\Client\Model\EmailIdentityStatus|null
+     * @return \AHRDMail\Client\Model\EmailIdentityStatus|null
      */
     public function getStatus()
     {
@@ -404,7 +404,7 @@ class EmailIdentitySummary implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets status
      *
-     * @param \OpenAPI\Client\Model\EmailIdentityStatus|null $status status
+     * @param \AHRDMail\Client\Model\EmailIdentityStatus|null $status status
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace AHRDMail\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \AHRDMail\Client\ObjectSerializer;
 
 /**
  * ListCampaignMetricsResponseContent Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ListCampaignMetricsResponseContent implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'metrics' => '\OpenAPI\Client\Model\CampaignMetricsSummary[]',
+        'metrics' => '\AHRDMail\Client\Model\CampaignMetricsSummary[]',
         'next_token' => 'string'
     ];
 
@@ -299,7 +299,7 @@ class ListCampaignMetricsResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Gets metrics
      *
-     * @return \OpenAPI\Client\Model\CampaignMetricsSummary[]|null
+     * @return \AHRDMail\Client\Model\CampaignMetricsSummary[]|null
      */
     public function getMetrics()
     {
@@ -309,7 +309,7 @@ class ListCampaignMetricsResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Sets metrics
      *
-     * @param \OpenAPI\Client\Model\CampaignMetricsSummary[]|null $metrics metrics
+     * @param \AHRDMail\Client\Model\CampaignMetricsSummary[]|null $metrics metrics
      *
      * @return self
      */

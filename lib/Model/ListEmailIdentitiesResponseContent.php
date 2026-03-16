@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace AHRDMail\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \AHRDMail\Client\ObjectSerializer;
 
 /**
  * ListEmailIdentitiesResponseContent Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ListEmailIdentitiesResponseContent implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'identities' => '\OpenAPI\Client\Model\EmailIdentitySummary[]'
+        'identities' => '\AHRDMail\Client\Model\EmailIdentitySummary[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class ListEmailIdentitiesResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Gets identities
      *
-     * @return \OpenAPI\Client\Model\EmailIdentitySummary[]|null
+     * @return \AHRDMail\Client\Model\EmailIdentitySummary[]|null
      */
     public function getIdentities()
     {
@@ -302,7 +302,7 @@ class ListEmailIdentitiesResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Sets identities
      *
-     * @param \OpenAPI\Client\Model\EmailIdentitySummary[]|null $identities identities
+     * @param \AHRDMail\Client\Model\EmailIdentitySummary[]|null $identities identities
      *
      * @return self
      */

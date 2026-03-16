@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **from** | **string** |  |
 **to** | **string[]** |  |
 **subject** | **string** |  |
-**body** | [**\OpenAPI\Client\Model\EmailBody**](EmailBody.md) |  |
+**body** | [**\AHRDMail\Client\Model\EmailBody**](EmailBody.md) |  |
 **campaign_id** | **string** |  | [optional]
 **tags** | **array<string,string>** |  | [optional]
 

@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace AHRDMail\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \AHRDMail\Client\ObjectSerializer;
 
 /**
  * ListSubtenantMetricsResponseContent Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ListSubtenantMetricsResponseContent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'metrics' => '\OpenAPI\Client\Model\SubtenantMetricsSummary[]',
+        'metrics' => '\AHRDMail\Client\Model\SubtenantMetricsSummary[]',
         'next_token' => 'string'
     ];
 
@@ -299,7 +299,7 @@ class ListSubtenantMetricsResponseContent implements ModelInterface, ArrayAccess
     /**
      * Gets metrics
      *
-     * @return \OpenAPI\Client\Model\SubtenantMetricsSummary[]|null
+     * @return \AHRDMail\Client\Model\SubtenantMetricsSummary[]|null
      */
     public function getMetrics()
     {
@@ -309,7 +309,7 @@ class ListSubtenantMetricsResponseContent implements ModelInterface, ArrayAccess
     /**
      * Sets metrics
      *
-     * @param \OpenAPI\Client\Model\SubtenantMetricsSummary[]|null $metrics metrics
+     * @param \AHRDMail\Client\Model\SubtenantMetricsSummary[]|null $metrics metrics
      *
      * @return self
      */

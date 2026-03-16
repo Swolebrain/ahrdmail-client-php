@@ -49,18 +49,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: smithy.api.httpApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = AHRDMail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = AHRDMail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultApi(
+$apiInstance = new AHRDMail\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$check_email_identity_dns_request_content = new \OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent(); // \OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent
+$check_email_identity_dns_request_content = new \AHRDMail\Client\Model\CheckEmailIdentityDnsRequestContent(); // \AHRDMail\Client\Model\CheckEmailIdentityDnsRequestContent
 
 try {
     $result = $apiInstance->checkEmailIdentityDns($check_email_identity_dns_request_content);

@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace AHRDMail\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use AHRDMail\Client\ApiException;
+use AHRDMail\Client\Configuration;
+use AHRDMail\Client\FormDataProcessor;
+use AHRDMail\Client\HeaderSelector;
+use AHRDMail\Client\ObjectSerializer;
 
 /**
  * DefaultApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,12 +149,12 @@ class DefaultApi
     /**
      * Operation checkEmailIdentityDns
      *
-     * @param  \OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent $check_email_identity_dns_request_content check_email_identity_dns_request_content (required)
+     * @param  \AHRDMail\Client\Model\CheckEmailIdentityDnsRequestContent $check_email_identity_dns_request_content check_email_identity_dns_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkEmailIdentityDns'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CheckEmailIdentityDnsResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent
+     * @return \AHRDMail\Client\Model\CheckEmailIdentityDnsResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent
      */
     public function checkEmailIdentityDns($check_email_identity_dns_request_content, string $contentType = self::contentTypes['checkEmailIdentityDns'][0])
     {
@@ -165,12 +165,12 @@ class DefaultApi
     /**
      * Operation checkEmailIdentityDnsWithHttpInfo
      *
-     * @param  \OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent $check_email_identity_dns_request_content (required)
+     * @param  \AHRDMail\Client\Model\CheckEmailIdentityDnsRequestContent $check_email_identity_dns_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkEmailIdentityDns'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CheckEmailIdentityDnsResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AHRDMail\Client\Model\CheckEmailIdentityDnsResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function checkEmailIdentityDnsWithHttpInfo($check_email_identity_dns_request_content, string $contentType = self::contentTypes['checkEmailIdentityDns'][0])
     {
@@ -202,13 +202,13 @@ class DefaultApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CheckEmailIdentityDnsResponseContent',
+                        '\AHRDMail\Client\Model\CheckEmailIdentityDnsResponseContent',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $request,
                         $response,
                     );
@@ -230,7 +230,7 @@ class DefaultApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CheckEmailIdentityDnsResponseContent',
+                '\AHRDMail\Client\Model\CheckEmailIdentityDnsResponseContent',
                 $request,
                 $response,
             );
@@ -239,7 +239,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CheckEmailIdentityDnsResponseContent',
+                        '\AHRDMail\Client\Model\CheckEmailIdentityDnsResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -247,7 +247,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class DefaultApi
     /**
      * Operation checkEmailIdentityDnsAsync
      *
-     * @param  \OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent $check_email_identity_dns_request_content (required)
+     * @param  \AHRDMail\Client\Model\CheckEmailIdentityDnsRequestContent $check_email_identity_dns_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkEmailIdentityDns'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class DefaultApi
     /**
      * Operation checkEmailIdentityDnsAsyncWithHttpInfo
      *
-     * @param  \OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent $check_email_identity_dns_request_content (required)
+     * @param  \AHRDMail\Client\Model\CheckEmailIdentityDnsRequestContent $check_email_identity_dns_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkEmailIdentityDns'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -289,7 +289,7 @@ class DefaultApi
      */
     public function checkEmailIdentityDnsAsyncWithHttpInfo($check_email_identity_dns_request_content, string $contentType = self::contentTypes['checkEmailIdentityDns'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CheckEmailIdentityDnsResponseContent';
+        $returnType = '\AHRDMail\Client\Model\CheckEmailIdentityDnsResponseContent';
         $request = $this->checkEmailIdentityDnsRequest($check_email_identity_dns_request_content, $contentType);
 
         return $this->client
@@ -331,7 +331,7 @@ class DefaultApi
     /**
      * Create request for operation 'checkEmailIdentityDns'
      *
-     * @param  \OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent $check_email_identity_dns_request_content (required)
+     * @param  \AHRDMail\Client\Model\CheckEmailIdentityDnsRequestContent $check_email_identity_dns_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkEmailIdentityDns'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -427,12 +427,12 @@ class DefaultApi
     /**
      * Operation createEmailIdentity
      *
-     * @param  \OpenAPI\Client\Model\CreateEmailIdentityRequestContent $create_email_identity_request_content create_email_identity_request_content (required)
+     * @param  \AHRDMail\Client\Model\CreateEmailIdentityRequestContent $create_email_identity_request_content create_email_identity_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailIdentity'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateEmailIdentityResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent
+     * @return \AHRDMail\Client\Model\CreateEmailIdentityResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent
      */
     public function createEmailIdentity($create_email_identity_request_content, string $contentType = self::contentTypes['createEmailIdentity'][0])
     {
@@ -443,12 +443,12 @@ class DefaultApi
     /**
      * Operation createEmailIdentityWithHttpInfo
      *
-     * @param  \OpenAPI\Client\Model\CreateEmailIdentityRequestContent $create_email_identity_request_content (required)
+     * @param  \AHRDMail\Client\Model\CreateEmailIdentityRequestContent $create_email_identity_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailIdentity'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateEmailIdentityResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AHRDMail\Client\Model\CreateEmailIdentityResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function createEmailIdentityWithHttpInfo($create_email_identity_request_content, string $contentType = self::contentTypes['createEmailIdentity'][0])
     {
@@ -480,13 +480,13 @@ class DefaultApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CreateEmailIdentityResponseContent',
+                        '\AHRDMail\Client\Model\CreateEmailIdentityResponseContent',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $request,
                         $response,
                     );
@@ -508,7 +508,7 @@ class DefaultApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CreateEmailIdentityResponseContent',
+                '\AHRDMail\Client\Model\CreateEmailIdentityResponseContent',
                 $request,
                 $response,
             );
@@ -517,7 +517,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateEmailIdentityResponseContent',
+                        '\AHRDMail\Client\Model\CreateEmailIdentityResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -525,7 +525,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -540,7 +540,7 @@ class DefaultApi
     /**
      * Operation createEmailIdentityAsync
      *
-     * @param  \OpenAPI\Client\Model\CreateEmailIdentityRequestContent $create_email_identity_request_content (required)
+     * @param  \AHRDMail\Client\Model\CreateEmailIdentityRequestContent $create_email_identity_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailIdentity'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -559,7 +559,7 @@ class DefaultApi
     /**
      * Operation createEmailIdentityAsyncWithHttpInfo
      *
-     * @param  \OpenAPI\Client\Model\CreateEmailIdentityRequestContent $create_email_identity_request_content (required)
+     * @param  \AHRDMail\Client\Model\CreateEmailIdentityRequestContent $create_email_identity_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailIdentity'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -567,7 +567,7 @@ class DefaultApi
      */
     public function createEmailIdentityAsyncWithHttpInfo($create_email_identity_request_content, string $contentType = self::contentTypes['createEmailIdentity'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CreateEmailIdentityResponseContent';
+        $returnType = '\AHRDMail\Client\Model\CreateEmailIdentityResponseContent';
         $request = $this->createEmailIdentityRequest($create_email_identity_request_content, $contentType);
 
         return $this->client
@@ -609,7 +609,7 @@ class DefaultApi
     /**
      * Create request for operation 'createEmailIdentity'
      *
-     * @param  \OpenAPI\Client\Model\CreateEmailIdentityRequestContent $create_email_identity_request_content (required)
+     * @param  \AHRDMail\Client\Model\CreateEmailIdentityRequestContent $create_email_identity_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmailIdentity'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -705,12 +705,12 @@ class DefaultApi
     /**
      * Operation createSubtenant
      *
-     * @param  \OpenAPI\Client\Model\CreateSubtenantRequestContent $create_subtenant_request_content create_subtenant_request_content (required)
+     * @param  \AHRDMail\Client\Model\CreateSubtenantRequestContent $create_subtenant_request_content create_subtenant_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubtenant'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateSubtenantResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent
+     * @return \AHRDMail\Client\Model\CreateSubtenantResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent
      */
     public function createSubtenant($create_subtenant_request_content, string $contentType = self::contentTypes['createSubtenant'][0])
     {
@@ -721,12 +721,12 @@ class DefaultApi
     /**
      * Operation createSubtenantWithHttpInfo
      *
-     * @param  \OpenAPI\Client\Model\CreateSubtenantRequestContent $create_subtenant_request_content (required)
+     * @param  \AHRDMail\Client\Model\CreateSubtenantRequestContent $create_subtenant_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubtenant'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateSubtenantResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AHRDMail\Client\Model\CreateSubtenantResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSubtenantWithHttpInfo($create_subtenant_request_content, string $contentType = self::contentTypes['createSubtenant'][0])
     {
@@ -758,13 +758,13 @@ class DefaultApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CreateSubtenantResponseContent',
+                        '\AHRDMail\Client\Model\CreateSubtenantResponseContent',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $request,
                         $response,
                     );
@@ -786,7 +786,7 @@ class DefaultApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CreateSubtenantResponseContent',
+                '\AHRDMail\Client\Model\CreateSubtenantResponseContent',
                 $request,
                 $response,
             );
@@ -795,7 +795,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateSubtenantResponseContent',
+                        '\AHRDMail\Client\Model\CreateSubtenantResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -803,7 +803,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -818,7 +818,7 @@ class DefaultApi
     /**
      * Operation createSubtenantAsync
      *
-     * @param  \OpenAPI\Client\Model\CreateSubtenantRequestContent $create_subtenant_request_content (required)
+     * @param  \AHRDMail\Client\Model\CreateSubtenantRequestContent $create_subtenant_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubtenant'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -837,7 +837,7 @@ class DefaultApi
     /**
      * Operation createSubtenantAsyncWithHttpInfo
      *
-     * @param  \OpenAPI\Client\Model\CreateSubtenantRequestContent $create_subtenant_request_content (required)
+     * @param  \AHRDMail\Client\Model\CreateSubtenantRequestContent $create_subtenant_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubtenant'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -845,7 +845,7 @@ class DefaultApi
      */
     public function createSubtenantAsyncWithHttpInfo($create_subtenant_request_content, string $contentType = self::contentTypes['createSubtenant'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CreateSubtenantResponseContent';
+        $returnType = '\AHRDMail\Client\Model\CreateSubtenantResponseContent';
         $request = $this->createSubtenantRequest($create_subtenant_request_content, $contentType);
 
         return $this->client
@@ -887,7 +887,7 @@ class DefaultApi
     /**
      * Create request for operation 'createSubtenant'
      *
-     * @param  \OpenAPI\Client\Model\CreateSubtenantRequestContent $create_subtenant_request_content (required)
+     * @param  \AHRDMail\Client\Model\CreateSubtenantRequestContent $create_subtenant_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSubtenant'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -987,9 +987,9 @@ class DefaultApi
      * @param  string|null $subtenant_id subtenant_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEmailIdentity'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DeleteEmailIdentityResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent
+     * @return \AHRDMail\Client\Model\DeleteEmailIdentityResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent
      */
     public function deleteEmailIdentity($id, $subtenant_id = null, string $contentType = self::contentTypes['deleteEmailIdentity'][0])
     {
@@ -1004,9 +1004,9 @@ class DefaultApi
      * @param  string|null $subtenant_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEmailIdentity'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DeleteEmailIdentityResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AHRDMail\Client\Model\DeleteEmailIdentityResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteEmailIdentityWithHttpInfo($id, $subtenant_id = null, string $contentType = self::contentTypes['deleteEmailIdentity'][0])
     {
@@ -1038,13 +1038,13 @@ class DefaultApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\DeleteEmailIdentityResponseContent',
+                        '\AHRDMail\Client\Model\DeleteEmailIdentityResponseContent',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $request,
                         $response,
                     );
@@ -1066,7 +1066,7 @@ class DefaultApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\DeleteEmailIdentityResponseContent',
+                '\AHRDMail\Client\Model\DeleteEmailIdentityResponseContent',
                 $request,
                 $response,
             );
@@ -1075,7 +1075,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DeleteEmailIdentityResponseContent',
+                        '\AHRDMail\Client\Model\DeleteEmailIdentityResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1083,7 +1083,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1127,7 +1127,7 @@ class DefaultApi
      */
     public function deleteEmailIdentityAsyncWithHttpInfo($id, $subtenant_id = null, string $contentType = self::contentTypes['deleteEmailIdentity'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DeleteEmailIdentityResponseContent';
+        $returnType = '\AHRDMail\Client\Model\DeleteEmailIdentityResponseContent';
         $request = $this->deleteEmailIdentityRequest($id, $subtenant_id, $contentType);
 
         return $this->client
@@ -1283,9 +1283,9 @@ class DefaultApi
      * @param  float|null $page_size page_size (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCampaignMetrics'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListCampaignMetricsResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent
+     * @return \AHRDMail\Client\Model\ListCampaignMetricsResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent
      */
     public function listCampaignMetrics($subtenant_id, $next_token = null, $page_size = null, string $contentType = self::contentTypes['listCampaignMetrics'][0])
     {
@@ -1301,9 +1301,9 @@ class DefaultApi
      * @param  float|null $page_size (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCampaignMetrics'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListCampaignMetricsResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AHRDMail\Client\Model\ListCampaignMetricsResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCampaignMetricsWithHttpInfo($subtenant_id, $next_token = null, $page_size = null, string $contentType = self::contentTypes['listCampaignMetrics'][0])
     {
@@ -1335,13 +1335,13 @@ class DefaultApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ListCampaignMetricsResponseContent',
+                        '\AHRDMail\Client\Model\ListCampaignMetricsResponseContent',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $request,
                         $response,
                     );
@@ -1363,7 +1363,7 @@ class DefaultApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ListCampaignMetricsResponseContent',
+                '\AHRDMail\Client\Model\ListCampaignMetricsResponseContent',
                 $request,
                 $response,
             );
@@ -1372,7 +1372,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListCampaignMetricsResponseContent',
+                        '\AHRDMail\Client\Model\ListCampaignMetricsResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1380,7 +1380,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1426,7 +1426,7 @@ class DefaultApi
      */
     public function listCampaignMetricsAsyncWithHttpInfo($subtenant_id, $next_token = null, $page_size = null, string $contentType = self::contentTypes['listCampaignMetrics'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ListCampaignMetricsResponseContent';
+        $returnType = '\AHRDMail\Client\Model\ListCampaignMetricsResponseContent';
         $request = $this->listCampaignMetricsRequest($subtenant_id, $next_token, $page_size, $contentType);
 
         return $this->client
@@ -1591,9 +1591,9 @@ class DefaultApi
      * @param  string $subtenant_id subtenant_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEmailIdentities'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListEmailIdentitiesResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent
+     * @return \AHRDMail\Client\Model\ListEmailIdentitiesResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent
      */
     public function listEmailIdentities($subtenant_id, string $contentType = self::contentTypes['listEmailIdentities'][0])
     {
@@ -1607,9 +1607,9 @@ class DefaultApi
      * @param  string $subtenant_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEmailIdentities'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListEmailIdentitiesResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AHRDMail\Client\Model\ListEmailIdentitiesResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function listEmailIdentitiesWithHttpInfo($subtenant_id, string $contentType = self::contentTypes['listEmailIdentities'][0])
     {
@@ -1641,13 +1641,13 @@ class DefaultApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ListEmailIdentitiesResponseContent',
+                        '\AHRDMail\Client\Model\ListEmailIdentitiesResponseContent',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $request,
                         $response,
                     );
@@ -1669,7 +1669,7 @@ class DefaultApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ListEmailIdentitiesResponseContent',
+                '\AHRDMail\Client\Model\ListEmailIdentitiesResponseContent',
                 $request,
                 $response,
             );
@@ -1678,7 +1678,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListEmailIdentitiesResponseContent',
+                        '\AHRDMail\Client\Model\ListEmailIdentitiesResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1686,7 +1686,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1728,7 +1728,7 @@ class DefaultApi
      */
     public function listEmailIdentitiesAsyncWithHttpInfo($subtenant_id, string $contentType = self::contentTypes['listEmailIdentities'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ListEmailIdentitiesResponseContent';
+        $returnType = '\AHRDMail\Client\Model\ListEmailIdentitiesResponseContent';
         $request = $this->listEmailIdentitiesRequest($subtenant_id, $contentType);
 
         return $this->client
@@ -1872,9 +1872,9 @@ class DefaultApi
      * @param  float|null $page_size page_size (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listSubtenantMetrics'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListSubtenantMetricsResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent
+     * @return \AHRDMail\Client\Model\ListSubtenantMetricsResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent
      */
     public function listSubtenantMetrics($next_token = null, $page_size = null, string $contentType = self::contentTypes['listSubtenantMetrics'][0])
     {
@@ -1889,9 +1889,9 @@ class DefaultApi
      * @param  float|null $page_size (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listSubtenantMetrics'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListSubtenantMetricsResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AHRDMail\Client\Model\ListSubtenantMetricsResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSubtenantMetricsWithHttpInfo($next_token = null, $page_size = null, string $contentType = self::contentTypes['listSubtenantMetrics'][0])
     {
@@ -1923,13 +1923,13 @@ class DefaultApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ListSubtenantMetricsResponseContent',
+                        '\AHRDMail\Client\Model\ListSubtenantMetricsResponseContent',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $request,
                         $response,
                     );
@@ -1951,7 +1951,7 @@ class DefaultApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ListSubtenantMetricsResponseContent',
+                '\AHRDMail\Client\Model\ListSubtenantMetricsResponseContent',
                 $request,
                 $response,
             );
@@ -1960,7 +1960,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListSubtenantMetricsResponseContent',
+                        '\AHRDMail\Client\Model\ListSubtenantMetricsResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1968,7 +1968,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2012,7 +2012,7 @@ class DefaultApi
      */
     public function listSubtenantMetricsAsyncWithHttpInfo($next_token = null, $page_size = null, string $contentType = self::contentTypes['listSubtenantMetrics'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ListSubtenantMetricsResponseContent';
+        $returnType = '\AHRDMail\Client\Model\ListSubtenantMetricsResponseContent';
         $request = $this->listSubtenantMetricsRequest($next_token, $page_size, $contentType);
 
         return $this->client
@@ -2157,12 +2157,12 @@ class DefaultApi
     /**
      * Operation sendEmail
      *
-     * @param  \OpenAPI\Client\Model\SendEmailRequestContent $send_email_request_content send_email_request_content (required)
+     * @param  \AHRDMail\Client\Model\SendEmailRequestContent $send_email_request_content send_email_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendEmail'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SendEmailResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent
+     * @return \AHRDMail\Client\Model\SendEmailResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent
      */
     public function sendEmail($send_email_request_content, string $contentType = self::contentTypes['sendEmail'][0])
     {
@@ -2173,12 +2173,12 @@ class DefaultApi
     /**
      * Operation sendEmailWithHttpInfo
      *
-     * @param  \OpenAPI\Client\Model\SendEmailRequestContent $send_email_request_content (required)
+     * @param  \AHRDMail\Client\Model\SendEmailRequestContent $send_email_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendEmail'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AHRDMail\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SendEmailResponseContent|\OpenAPI\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AHRDMail\Client\Model\SendEmailResponseContent|\AHRDMail\Client\Model\ValidationExceptionResponseContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendEmailWithHttpInfo($send_email_request_content, string $contentType = self::contentTypes['sendEmail'][0])
     {
@@ -2210,13 +2210,13 @@ class DefaultApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\SendEmailResponseContent',
+                        '\AHRDMail\Client\Model\SendEmailResponseContent',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $request,
                         $response,
                     );
@@ -2238,7 +2238,7 @@ class DefaultApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\SendEmailResponseContent',
+                '\AHRDMail\Client\Model\SendEmailResponseContent',
                 $request,
                 $response,
             );
@@ -2247,7 +2247,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SendEmailResponseContent',
+                        '\AHRDMail\Client\Model\SendEmailResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2255,7 +2255,7 @@ class DefaultApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationExceptionResponseContent',
+                        '\AHRDMail\Client\Model\ValidationExceptionResponseContent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2270,7 +2270,7 @@ class DefaultApi
     /**
      * Operation sendEmailAsync
      *
-     * @param  \OpenAPI\Client\Model\SendEmailRequestContent $send_email_request_content (required)
+     * @param  \AHRDMail\Client\Model\SendEmailRequestContent $send_email_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2289,7 +2289,7 @@ class DefaultApi
     /**
      * Operation sendEmailAsyncWithHttpInfo
      *
-     * @param  \OpenAPI\Client\Model\SendEmailRequestContent $send_email_request_content (required)
+     * @param  \AHRDMail\Client\Model\SendEmailRequestContent $send_email_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2297,7 +2297,7 @@ class DefaultApi
      */
     public function sendEmailAsyncWithHttpInfo($send_email_request_content, string $contentType = self::contentTypes['sendEmail'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SendEmailResponseContent';
+        $returnType = '\AHRDMail\Client\Model\SendEmailResponseContent';
         $request = $this->sendEmailRequest($send_email_request_content, $contentType);
 
         return $this->client
@@ -2339,7 +2339,7 @@ class DefaultApi
     /**
      * Create request for operation 'sendEmail'
      *
-     * @param  \OpenAPI\Client\Model\SendEmailRequestContent $send_email_request_content (required)
+     * @param  \AHRDMail\Client\Model\SendEmailRequestContent $send_email_request_content (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

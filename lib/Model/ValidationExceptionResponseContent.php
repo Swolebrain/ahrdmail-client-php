@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace AHRDMail\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \AHRDMail\Client\ObjectSerializer;
 
 /**
  * ValidationExceptionResponseContent Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  AHRDMail\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ValidationExceptionResponseContent implements ModelInterface, ArrayAccess,
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'field_list' => '\OpenAPI\Client\Model\ValidationExceptionField[]'
+        'field_list' => '\AHRDMail\Client\Model\ValidationExceptionField[]'
     ];
 
     /**
@@ -329,7 +329,7 @@ class ValidationExceptionResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Gets field_list
      *
-     * @return \OpenAPI\Client\Model\ValidationExceptionField[]|null
+     * @return \AHRDMail\Client\Model\ValidationExceptionField[]|null
      */
     public function getFieldList()
     {
@@ -339,7 +339,7 @@ class ValidationExceptionResponseContent implements ModelInterface, ArrayAccess,
     /**
      * Sets field_list
      *
-     * @param \OpenAPI\Client\Model\ValidationExceptionField[]|null $field_list field_list
+     * @param \AHRDMail\Client\Model\ValidationExceptionField[]|null $field_list field_list
      *
      * @return self
      */
