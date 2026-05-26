@@ -1,4 +1,4 @@
-# OpenAPI\Client\DefaultApi
+# Ahrdmail\Client\DefaultApi
 
 
 
@@ -8,18 +8,23 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | ------------- | ------------- | ------------- |
 | [**checkEmailIdentityDns()**](DefaultApi.md#checkEmailIdentityDns) | **POST** /email-identity/check-dns |  |
 | [**createEmailIdentity()**](DefaultApi.md#createEmailIdentity) | **POST** /email-identities |  |
+| [**createMailbox()**](DefaultApi.md#createMailbox) | **POST** /mailboxes |  |
 | [**createSubtenant()**](DefaultApi.md#createSubtenant) | **POST** /subtenants |  |
 | [**deleteEmailIdentity()**](DefaultApi.md#deleteEmailIdentity) | **DELETE** /email-identity |  |
+| [**deleteMailbox()**](DefaultApi.md#deleteMailbox) | **DELETE** /mailboxes/{address} |  |
+| [**describeSubtenants()**](DefaultApi.md#describeSubtenants) | **GET** /subtenants |  |
 | [**listCampaignMetrics()**](DefaultApi.md#listCampaignMetrics) | **GET** /metrics/campaigns |  |
 | [**listEmailIdentities()**](DefaultApi.md#listEmailIdentities) | **GET** /email-identities |  |
+| [**listMailboxes()**](DefaultApi.md#listMailboxes) | **GET** /mailboxes |  |
 | [**listSubtenantMetrics()**](DefaultApi.md#listSubtenantMetrics) | **GET** /metrics/subtenants |  |
 | [**sendEmail()**](DefaultApi.md#sendEmail) | **POST** /email |  |
+| [**updateMailbox()**](DefaultApi.md#updateMailbox) | **PATCH** /mailboxes/{address} |  |
 
 
 ## `checkEmailIdentityDns()`
 
 ```php
-checkEmailIdentityDns($check_email_identity_dns_request_content): \OpenAPI\Client\Model\CheckEmailIdentityDnsResponseContent
+checkEmailIdentityDns($check_email_identity_dns_request_content): \Ahrdmail\Client\Model\CheckEmailIdentityDnsResponseContent
 ```
 
 
@@ -32,18 +37,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: smithy.api.httpApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultApi(
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$check_email_identity_dns_request_content = new \OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent(); // \OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent
+$check_email_identity_dns_request_content = new \Ahrdmail\Client\Model\CheckEmailIdentityDnsRequestContent(); // \Ahrdmail\Client\Model\CheckEmailIdentityDnsRequestContent
 
 try {
     $result = $apiInstance->checkEmailIdentityDns($check_email_identity_dns_request_content);
@@ -57,11 +62,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **check_email_identity_dns_request_content** | [**\OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent**](../Model/CheckEmailIdentityDnsRequestContent.md)|  | |
+| **check_email_identity_dns_request_content** | [**\Ahrdmail\Client\Model\CheckEmailIdentityDnsRequestContent**](../Model/CheckEmailIdentityDnsRequestContent.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CheckEmailIdentityDnsResponseContent**](../Model/CheckEmailIdentityDnsResponseContent.md)
+[**\Ahrdmail\Client\Model\CheckEmailIdentityDnsResponseContent**](../Model/CheckEmailIdentityDnsResponseContent.md)
 
 ### Authorization
 
@@ -79,7 +84,7 @@ try {
 ## `createEmailIdentity()`
 
 ```php
-createEmailIdentity($create_email_identity_request_content): \OpenAPI\Client\Model\CreateEmailIdentityResponseContent
+createEmailIdentity($create_email_identity_request_content): \Ahrdmail\Client\Model\CreateEmailIdentityResponseContent
 ```
 
 
@@ -92,18 +97,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: smithy.api.httpApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultApi(
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_email_identity_request_content = new \OpenAPI\Client\Model\CreateEmailIdentityRequestContent(); // \OpenAPI\Client\Model\CreateEmailIdentityRequestContent
+$create_email_identity_request_content = new \Ahrdmail\Client\Model\CreateEmailIdentityRequestContent(); // \Ahrdmail\Client\Model\CreateEmailIdentityRequestContent
 
 try {
     $result = $apiInstance->createEmailIdentity($create_email_identity_request_content);
@@ -117,11 +122,71 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_email_identity_request_content** | [**\OpenAPI\Client\Model\CreateEmailIdentityRequestContent**](../Model/CreateEmailIdentityRequestContent.md)|  | |
+| **create_email_identity_request_content** | [**\Ahrdmail\Client\Model\CreateEmailIdentityRequestContent**](../Model/CreateEmailIdentityRequestContent.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreateEmailIdentityResponseContent**](../Model/CreateEmailIdentityResponseContent.md)
+[**\Ahrdmail\Client\Model\CreateEmailIdentityResponseContent**](../Model/CreateEmailIdentityResponseContent.md)
+
+### Authorization
+
+[smithy.api.httpApiKeyAuth](../../README.md#smithy.api.httpApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `createMailbox()`
+
+```php
+createMailbox($create_mailbox_request_content): \Ahrdmail\Client\Model\CreateMailboxResponseContent
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: smithy.api.httpApiKeyAuth
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$create_mailbox_request_content = new \Ahrdmail\Client\Model\CreateMailboxRequestContent(); // \Ahrdmail\Client\Model\CreateMailboxRequestContent
+
+try {
+    $result = $apiInstance->createMailbox($create_mailbox_request_content);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->createMailbox: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **create_mailbox_request_content** | [**\Ahrdmail\Client\Model\CreateMailboxRequestContent**](../Model/CreateMailboxRequestContent.md)|  | |
+
+### Return type
+
+[**\Ahrdmail\Client\Model\CreateMailboxResponseContent**](../Model/CreateMailboxResponseContent.md)
 
 ### Authorization
 
@@ -139,7 +204,7 @@ try {
 ## `createSubtenant()`
 
 ```php
-createSubtenant($create_subtenant_request_content): \OpenAPI\Client\Model\CreateSubtenantResponseContent
+createSubtenant($create_subtenant_request_content): \Ahrdmail\Client\Model\CreateSubtenantResponseContent
 ```
 
 
@@ -152,18 +217,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: smithy.api.httpApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultApi(
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_subtenant_request_content = new \OpenAPI\Client\Model\CreateSubtenantRequestContent(); // \OpenAPI\Client\Model\CreateSubtenantRequestContent
+$create_subtenant_request_content = new \Ahrdmail\Client\Model\CreateSubtenantRequestContent(); // \Ahrdmail\Client\Model\CreateSubtenantRequestContent
 
 try {
     $result = $apiInstance->createSubtenant($create_subtenant_request_content);
@@ -177,11 +242,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_subtenant_request_content** | [**\OpenAPI\Client\Model\CreateSubtenantRequestContent**](../Model/CreateSubtenantRequestContent.md)|  | |
+| **create_subtenant_request_content** | [**\Ahrdmail\Client\Model\CreateSubtenantRequestContent**](../Model/CreateSubtenantRequestContent.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreateSubtenantResponseContent**](../Model/CreateSubtenantResponseContent.md)
+[**\Ahrdmail\Client\Model\CreateSubtenantResponseContent**](../Model/CreateSubtenantResponseContent.md)
 
 ### Authorization
 
@@ -199,7 +264,7 @@ try {
 ## `deleteEmailIdentity()`
 
 ```php
-deleteEmailIdentity($id, $subtenant_id): \OpenAPI\Client\Model\DeleteEmailIdentityResponseContent
+deleteEmailIdentity($id, $subtenant_id): \Ahrdmail\Client\Model\DeleteEmailIdentityResponseContent
 ```
 
 
@@ -212,12 +277,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: smithy.api.httpApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultApi(
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -243,7 +308,129 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DeleteEmailIdentityResponseContent**](../Model/DeleteEmailIdentityResponseContent.md)
+[**\Ahrdmail\Client\Model\DeleteEmailIdentityResponseContent**](../Model/DeleteEmailIdentityResponseContent.md)
+
+### Authorization
+
+[smithy.api.httpApiKeyAuth](../../README.md#smithy.api.httpApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteMailbox()`
+
+```php
+deleteMailbox($address, $subtenant_id): \Ahrdmail\Client\Model\DeleteMailboxResponseContent
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: smithy.api.httpApiKeyAuth
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$address = 'address_example'; // string
+$subtenant_id = 'subtenant_id_example'; // string
+
+try {
+    $result = $apiInstance->deleteMailbox($address, $subtenant_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->deleteMailbox: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **address** | **string**|  | |
+| **subtenant_id** | **string**|  | |
+
+### Return type
+
+[**\Ahrdmail\Client\Model\DeleteMailboxResponseContent**](../Model/DeleteMailboxResponseContent.md)
+
+### Authorization
+
+[smithy.api.httpApiKeyAuth](../../README.md#smithy.api.httpApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `describeSubtenants()`
+
+```php
+describeSubtenants($next_token): \Ahrdmail\Client\Model\DescribeSubtenantsResponseContent
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: smithy.api.httpApiKeyAuth
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$next_token = 'next_token_example'; // string
+
+try {
+    $result = $apiInstance->describeSubtenants($next_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->describeSubtenants: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **next_token** | **string**|  | [optional] |
+
+### Return type
+
+[**\Ahrdmail\Client\Model\DescribeSubtenantsResponseContent**](../Model/DescribeSubtenantsResponseContent.md)
 
 ### Authorization
 
@@ -261,7 +448,7 @@ try {
 ## `listCampaignMetrics()`
 
 ```php
-listCampaignMetrics($subtenant_id, $next_token, $page_size): \OpenAPI\Client\Model\ListCampaignMetricsResponseContent
+listCampaignMetrics($subtenant_id, $next_token, $page_size): \Ahrdmail\Client\Model\ListCampaignMetricsResponseContent
 ```
 
 
@@ -274,12 +461,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: smithy.api.httpApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultApi(
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -307,7 +494,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListCampaignMetricsResponseContent**](../Model/ListCampaignMetricsResponseContent.md)
+[**\Ahrdmail\Client\Model\ListCampaignMetricsResponseContent**](../Model/ListCampaignMetricsResponseContent.md)
 
 ### Authorization
 
@@ -325,7 +512,7 @@ try {
 ## `listEmailIdentities()`
 
 ```php
-listEmailIdentities($subtenant_id): \OpenAPI\Client\Model\ListEmailIdentitiesResponseContent
+listEmailIdentities($subtenant_id): \Ahrdmail\Client\Model\ListEmailIdentitiesResponseContent
 ```
 
 
@@ -338,12 +525,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: smithy.api.httpApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultApi(
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -367,7 +554,71 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListEmailIdentitiesResponseContent**](../Model/ListEmailIdentitiesResponseContent.md)
+[**\Ahrdmail\Client\Model\ListEmailIdentitiesResponseContent**](../Model/ListEmailIdentitiesResponseContent.md)
+
+### Authorization
+
+[smithy.api.httpApiKeyAuth](../../README.md#smithy.api.httpApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listMailboxes()`
+
+```php
+listMailboxes($subtenant_id, $domain, $status): \Ahrdmail\Client\Model\ListMailboxesResponseContent
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: smithy.api.httpApiKeyAuth
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$subtenant_id = 'subtenant_id_example'; // string
+$domain = 'domain_example'; // string | Optional. When provided, only mailboxes under this domain are returned.
+$status = new \Ahrdmail\Client\Model\\Ahrdmail\Client\Model\MailboxStatus(); // \Ahrdmail\Client\Model\MailboxStatus
+
+try {
+    $result = $apiInstance->listMailboxes($subtenant_id, $domain, $status);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->listMailboxes: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **subtenant_id** | **string**|  | |
+| **domain** | **string**| Optional. When provided, only mailboxes under this domain are returned. | [optional] |
+| **status** | [**\Ahrdmail\Client\Model\MailboxStatus**](../Model/.md)|  | [optional] |
+
+### Return type
+
+[**\Ahrdmail\Client\Model\ListMailboxesResponseContent**](../Model/ListMailboxesResponseContent.md)
 
 ### Authorization
 
@@ -385,7 +636,7 @@ try {
 ## `listSubtenantMetrics()`
 
 ```php
-listSubtenantMetrics($next_token, $page_size): \OpenAPI\Client\Model\ListSubtenantMetricsResponseContent
+listSubtenantMetrics($next_token, $page_size): \Ahrdmail\Client\Model\ListSubtenantMetricsResponseContent
 ```
 
 
@@ -398,12 +649,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: smithy.api.httpApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultApi(
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -429,7 +680,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListSubtenantMetricsResponseContent**](../Model/ListSubtenantMetricsResponseContent.md)
+[**\Ahrdmail\Client\Model\ListSubtenantMetricsResponseContent**](../Model/ListSubtenantMetricsResponseContent.md)
 
 ### Authorization
 
@@ -447,7 +698,7 @@ try {
 ## `sendEmail()`
 
 ```php
-sendEmail($send_email_request_content): \OpenAPI\Client\Model\SendEmailResponseContent
+sendEmail($send_email_request_content): \Ahrdmail\Client\Model\SendEmailResponseContent
 ```
 
 
@@ -460,18 +711,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: smithy.api.httpApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultApi(
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$send_email_request_content = new \OpenAPI\Client\Model\SendEmailRequestContent(); // \OpenAPI\Client\Model\SendEmailRequestContent
+$send_email_request_content = new \Ahrdmail\Client\Model\SendEmailRequestContent(); // \Ahrdmail\Client\Model\SendEmailRequestContent
 
 try {
     $result = $apiInstance->sendEmail($send_email_request_content);
@@ -485,11 +736,73 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **send_email_request_content** | [**\OpenAPI\Client\Model\SendEmailRequestContent**](../Model/SendEmailRequestContent.md)|  | |
+| **send_email_request_content** | [**\Ahrdmail\Client\Model\SendEmailRequestContent**](../Model/SendEmailRequestContent.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendEmailResponseContent**](../Model/SendEmailResponseContent.md)
+[**\Ahrdmail\Client\Model\SendEmailResponseContent**](../Model/SendEmailResponseContent.md)
+
+### Authorization
+
+[smithy.api.httpApiKeyAuth](../../README.md#smithy.api.httpApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateMailbox()`
+
+```php
+updateMailbox($address, $update_mailbox_request_content): \Ahrdmail\Client\Model\UpdateMailboxResponseContent
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: smithy.api.httpApiKeyAuth
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$address = 'address_example'; // string | Full address as returned by CreateMailbox (lowercased `<localpart>@<domain>`; for shared mailboxes includes the `+<hash>`).
+$update_mailbox_request_content = new \Ahrdmail\Client\Model\UpdateMailboxRequestContent(); // \Ahrdmail\Client\Model\UpdateMailboxRequestContent
+
+try {
+    $result = $apiInstance->updateMailbox($address, $update_mailbox_request_content);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->updateMailbox: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **address** | **string**| Full address as returned by CreateMailbox (lowercased &#x60;&lt;localpart&gt;@&lt;domain&gt;&#x60;; for shared mailboxes includes the &#x60;+&lt;hash&gt;&#x60;). | |
+| **update_mailbox_request_content** | [**\Ahrdmail\Client\Model\UpdateMailboxRequestContent**](../Model/UpdateMailboxRequestContent.md)|  | |
+
+### Return type
+
+[**\Ahrdmail\Client\Model\UpdateMailboxResponseContent**](../Model/UpdateMailboxResponseContent.md)
 
 ### Authorization
 

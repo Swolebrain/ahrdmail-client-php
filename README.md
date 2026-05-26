@@ -49,18 +49,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: smithy.api.httpApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Ahrdmail\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultApi(
+$apiInstance = new Ahrdmail\Client\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$check_email_identity_dns_request_content = new \OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent(); // \OpenAPI\Client\Model\CheckEmailIdentityDnsRequestContent
+$check_email_identity_dns_request_content = new \Ahrdmail\Client\Model\CheckEmailIdentityDnsRequestContent(); // \Ahrdmail\Client\Model\CheckEmailIdentityDnsRequestContent
 
 try {
     $result = $apiInstance->checkEmailIdentityDns($check_email_identity_dns_request_content);
@@ -79,12 +79,17 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**checkEmailIdentityDns**](docs/Api/DefaultApi.md#checkemailidentitydns) | **POST** /email-identity/check-dns | 
 *DefaultApi* | [**createEmailIdentity**](docs/Api/DefaultApi.md#createemailidentity) | **POST** /email-identities | 
+*DefaultApi* | [**createMailbox**](docs/Api/DefaultApi.md#createmailbox) | **POST** /mailboxes | 
 *DefaultApi* | [**createSubtenant**](docs/Api/DefaultApi.md#createsubtenant) | **POST** /subtenants | 
 *DefaultApi* | [**deleteEmailIdentity**](docs/Api/DefaultApi.md#deleteemailidentity) | **DELETE** /email-identity | 
+*DefaultApi* | [**deleteMailbox**](docs/Api/DefaultApi.md#deletemailbox) | **DELETE** /mailboxes/{address} | 
+*DefaultApi* | [**describeSubtenants**](docs/Api/DefaultApi.md#describesubtenants) | **GET** /subtenants | 
 *DefaultApi* | [**listCampaignMetrics**](docs/Api/DefaultApi.md#listcampaignmetrics) | **GET** /metrics/campaigns | 
 *DefaultApi* | [**listEmailIdentities**](docs/Api/DefaultApi.md#listemailidentities) | **GET** /email-identities | 
+*DefaultApi* | [**listMailboxes**](docs/Api/DefaultApi.md#listmailboxes) | **GET** /mailboxes | 
 *DefaultApi* | [**listSubtenantMetrics**](docs/Api/DefaultApi.md#listsubtenantmetrics) | **GET** /metrics/subtenants | 
 *DefaultApi* | [**sendEmail**](docs/Api/DefaultApi.md#sendemail) | **POST** /email | 
+*DefaultApi* | [**updateMailbox**](docs/Api/DefaultApi.md#updatemailbox) | **PATCH** /mailboxes/{address} | 
 
 ## Models
 
@@ -93,21 +98,34 @@ Class | Method | HTTP request | Description
 - [CheckEmailIdentityDnsResponseContent](docs/Model/CheckEmailIdentityDnsResponseContent.md)
 - [CreateEmailIdentityRequestContent](docs/Model/CreateEmailIdentityRequestContent.md)
 - [CreateEmailIdentityResponseContent](docs/Model/CreateEmailIdentityResponseContent.md)
+- [CreateMailboxRequestContent](docs/Model/CreateMailboxRequestContent.md)
+- [CreateMailboxResponseContent](docs/Model/CreateMailboxResponseContent.md)
 - [CreateSubtenantRequestContent](docs/Model/CreateSubtenantRequestContent.md)
 - [CreateSubtenantResponseContent](docs/Model/CreateSubtenantResponseContent.md)
 - [DeleteEmailIdentityResponseContent](docs/Model/DeleteEmailIdentityResponseContent.md)
+- [DeleteMailboxResponseContent](docs/Model/DeleteMailboxResponseContent.md)
+- [DescribeSubtenantsResponseContent](docs/Model/DescribeSubtenantsResponseContent.md)
 - [DkimSettings](docs/Model/DkimSettings.md)
 - [DnsRecord](docs/Model/DnsRecord.md)
 - [EmailBody](docs/Model/EmailBody.md)
 - [EmailBodyType](docs/Model/EmailBodyType.md)
 - [EmailIdentityStatus](docs/Model/EmailIdentityStatus.md)
 - [EmailIdentitySummary](docs/Model/EmailIdentitySummary.md)
+- [IdentitySummary](docs/Model/IdentitySummary.md)
+- [InboundEmailSigningSecret](docs/Model/InboundEmailSigningSecret.md)
 - [ListCampaignMetricsResponseContent](docs/Model/ListCampaignMetricsResponseContent.md)
 - [ListEmailIdentitiesResponseContent](docs/Model/ListEmailIdentitiesResponseContent.md)
+- [ListMailboxesResponseContent](docs/Model/ListMailboxesResponseContent.md)
 - [ListSubtenantMetricsResponseContent](docs/Model/ListSubtenantMetricsResponseContent.md)
+- [MailboxStatus](docs/Model/MailboxStatus.md)
+- [MailboxSummary](docs/Model/MailboxSummary.md)
 - [SendEmailRequestContent](docs/Model/SendEmailRequestContent.md)
 - [SendEmailResponseContent](docs/Model/SendEmailResponseContent.md)
+- [SubtenantDetail](docs/Model/SubtenantDetail.md)
 - [SubtenantMetricsSummary](docs/Model/SubtenantMetricsSummary.md)
+- [SymmetricSecret](docs/Model/SymmetricSecret.md)
+- [UpdateMailboxRequestContent](docs/Model/UpdateMailboxRequestContent.md)
+- [UpdateMailboxResponseContent](docs/Model/UpdateMailboxResponseContent.md)
 - [ValidationExceptionField](docs/Model/ValidationExceptionField.md)
 - [ValidationExceptionResponseContent](docs/Model/ValidationExceptionResponseContent.md)
 - [VerificationTokens](docs/Model/VerificationTokens.md)
@@ -139,6 +157,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `1.1.0`
+- API version: `1.2.0`
     - Generator version: `7.20.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

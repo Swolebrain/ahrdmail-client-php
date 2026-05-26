@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identities** | [**\OpenAPI\Client\Model\EmailIdentitySummary[]**](EmailIdentitySummary.md) |  | [optional]
+**identities** | [**\Ahrdmail\Client\Model\EmailIdentitySummary[]**](EmailIdentitySummary.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
